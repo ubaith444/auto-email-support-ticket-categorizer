@@ -1,0 +1,85 @@
+data:
+  raw_path: "dataset.csv"
+  processed_dir: "data/processed"
+  target_column: "category"
+  text_column: "ticket"
+
+preprocessing:
+  lowercase: true
+  remove_punctuation: true
+  remove_numbers: false
+  remove_urls: true
+  remove_emails: true
+  remove_extra_whitespace: true
+
+tfidf:
+  ngram_range: [1, 2]
+  max_features: 3000
+  min_df: 1
+  max_df: 0.95
+  sublinear_tf: true
+  norm: "l2"
+
+model:
+  cv_folds: 5
+  random_state: 42
+  test_size: 0.2
+  algorithms:
+    - "linear_svm"
+    - "logistic_regression"
+    - "multinomial_nb"
+    - "decision_tree"
+    - "random_forest"
+
+confidence:
+  threshold: 0.60
+  very_high: 0.95
+  high: 0.80
+  medium: 0.60
+
+priority:
+  high_keywords:
+    - "urgent"
+    - "critical"
+    - "down"
+    - "server down"
+    - "production"
+    - "crash"
+    - "payment failed"
+    - "payment deducted"
+    - "security"
+    - "blocked"
+    - "not working"
+    - "cannot login"
+    - "failed"
+    - "immediately"
+  low_keywords:
+    - "question"
+    - "information"
+    - "clarification"
+    - "how"
+    - "guide"
+    - "request"
+    - "documentation"
+    - "feature"
+
+artifacts:
+  dir: "artifacts"
+  model_filename: "best_model.joblib"
+  vectorizer_filename: "tfidf_vectorizer.joblib"
+  metrics_filename: "metrics.json"
+
+reports:
+  dir: "reports"
+  confusion_matrix_filename: "confusion_matrix.png"
+  class_distribution_filename: "class_distribution.png"
+  ticket_length_filename: "ticket_length_distribution.png"
+  confidence_report_filename: "confidence_report.json"
+  confidence_distribution_filename: "confidence_distribution.png"
+  confidence_by_department_filename: "confidence_by_department.png"
+
+classes:
+  - BILLING
+  - TECHNICAL
+  - HR
+  - GENERAL
