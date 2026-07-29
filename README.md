@@ -8,6 +8,8 @@
 
 An enterprise-grade, lightweight NLP classification system that automatically categorizes incoming customer support tickets in real-time, computes probability-backed confidence scores, tags operational priority, and determines human-in-the-loop review routing.
 
+https://auto-email-support-ticket-categorizer-lscnuearz5ekozqnv22urw.streamlit.app/
+
 ---
 
 ## 📸 Enterprise Dashboard Preview
