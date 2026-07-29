@@ -1,0 +1,17 @@
+{
+    "avg_confidence": 93.31,
+    "avg_correct_confidence": 94.25,
+    "avg_incorrect_confidence": 58.98,
+    "highest_confidence": 99.55,
+    "lowest_confidence": 38.62,
+    "confidence_level_distribution": {
+        "VERY HIGH": 168,
+        "HIGH": 39,
+        "MEDIUM": 11,
+        "LOW": 8
+    },
+    "routing_decision_distribution": {
+        "AUTO ASSIGN": 218,
+        "NEEDS HUMAN REVIEW": 8
+    }
+}

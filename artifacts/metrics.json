@@ -1,0 +1,507 @@
+{
+    "summary": {
+        "best_algorithm": "linear_svm",
+        "best_params": {
+            "estimator__C": 5.0,
+            "tfidf_max_features": 3000,
+            "tfidf_ngram_range": [
+                1,
+                2
+            ],
+            "tfidf_sublinear_tf": false
+        },
+        "best_cv_f1_score": 0.9707,
+        "total_samples": 1126,
+        "train_samples": 900,
+        "test_samples": 226,
+        "num_classes": 4,
+        "classes": [
+            "BILLING",
+            "GENERAL",
+            "HR",
+            "TECHNICAL"
+        ]
+    },
+    "model_comparisons": {
+        "linear_svm": {
+            "best_params": {
+                "estimator__C": 5.0,
+                "tfidf_max_features": 3000,
+                "tfidf_ngram_range": [
+                    1,
+                    2
+                ],
+                "tfidf_sublinear_tf": false
+            },
+            "cv_f1_weighted_mean": 0.9707,
+            "cv_f1_weighted_std": 0.009,
+            "cv_f1_weighted_var": 8e-05,
+            "cv_accuracy_mean": 0.9707,
+            "train_time_sec": 29.3814,
+            "test_inference_time_sec": 0.0
+        },
+        "logistic_regression": {
+            "best_params": {
+                "C": 5.0,
+                "tfidf_ngram_range": [
+                    1,
+                    2
+                ]
+            },
+            "cv_f1_weighted_mean": 0.97,
+            "cv_f1_weighted_std": 0.0081,
+            "cv_f1_weighted_var": 6.5e-05,
+            "cv_accuracy_mean": 0.97,
+            "train_time_sec": 2.5278,
+            "test_inference_time_sec": 0.005128
+        },
+        "multinomial_nb": {
+            "best_params": {
+                "alpha": 1.0,
+                "tfidf_ngram_range": [
+                    1,
+                    2
+                ]
+            },
+            "cv_f1_weighted_mean": 0.9624,
+            "cv_f1_weighted_std": 0.0114,
+            "cv_f1_weighted_var": 0.000131,
+            "cv_accuracy_mean": 0.9626,
+            "train_time_sec": 1.157,
+            "test_inference_time_sec": 0.00499
+        },
+        "random_forest": {
+            "best_params": {
+                "max_depth": null,
+                "n_estimators": 100
+            },
+            "cv_f1_weighted_mean": 0.93,
+            "cv_f1_weighted_std": 0.023,
+            "cv_f1_weighted_var": 0.000531,
+            "cv_accuracy_mean": 0.9285,
+            "train_time_sec": 8.2427,
+            "test_inference_time_sec": 0.022379
+        },
+        "decision_tree": {
+            "best_params": {
+                "max_depth": 20
+            },
+            "cv_f1_weighted_mean": 0.7372,
+            "cv_f1_weighted_std": 0.04,
+            "cv_f1_weighted_var": 0.001596,
+            "cv_accuracy_mean": 0.7344,
+            "train_time_sec": 0.4824,
+            "test_inference_time_sec": 0.01163
+        }
+    },
+    "feature_importance": {
+        "BILLING": [
+            {
+                "feature": "payment",
+                "score": 2.44385
+            },
+            {
+                "feature": "invoice",
+                "score": 2.42773
+            },
+            {
+                "feature": "refund",
+                "score": 2.04649
+            },
+            {
+                "feature": "billing",
+                "score": 1.95472
+            },
+            {
+                "feature": "subscription",
+                "score": 1.80703
+            },
+            {
+                "feature": "charge",
+                "score": 1.49523
+            },
+            {
+                "feature": "tax",
+                "score": 1.45055
+            },
+            {
+                "feature": "card",
+                "score": 1.43308
+            },
+            {
+                "feature": "receipt",
+                "score": 1.4157
+            },
+            {
+                "feature": "charged",
+                "score": 1.35902
+            },
+            {
+                "feature": "statement",
+                "score": 1.22514
+            },
+            {
+                "feature": "credit",
+                "score": 1.08834
+            },
+            {
+                "feature": "auto",
+                "score": 1.03278
+            },
+            {
+                "feature": "transaction",
+                "score": 1.00988
+            },
+            {
+                "feature": "billed",
+                "score": 0.98888
+            },
+            {
+                "feature": "checkout",
+                "score": 0.9474
+            },
+            {
+                "feature": "paid",
+                "score": 0.9189
+            },
+            {
+                "feature": "twice",
+                "score": 0.84105
+            },
+            {
+                "feature": "cancelled",
+                "score": 0.81036
+            },
+            {
+                "feature": "charges",
+                "score": 0.80931
+            },
+            {
+                "feature": "accounting",
+                "score": 0.8046
+            },
+            {
+                "feature": "ago",
+                "score": 0.80453
+            },
+            {
+                "feature": "failed",
+                "score": 0.79771
+            },
+            {
+                "feature": "plan",
+                "score": 0.76935
+            },
+            {
+                "feature": "paymnt",
+                "score": 0.76878
+            }
+        ],
+        "GENERAL": [
+            {
+                "feature": "support",
+                "score": 1.59211
+            },
+            {
+                "feature": "offer",
+                "score": 1.45001
+            },
+            {
+                "feature": "feature",
+                "score": 1.36845
+            },
+            {
+                "feature": "security",
+                "score": 1.32432
+            },
+            {
+                "feature": "available",
+                "score": 1.2966
+            },
+            {
+                "feature": "product",
+                "score": 1.23197
+            },
+            {
+                "feature": "demo",
+                "score": 1.15532
+            },
+            {
+                "feature": "office",
+                "score": 1.03548
+            },
+            {
+                "feature": "press",
+                "score": 1.02156
+            },
+            {
+                "feature": "reseller",
+                "score": 0.93611
+            },
+            {
+                "feature": "located",
+                "score": 0.9297
+            },
+            {
+                "feature": "customer",
+                "score": 0.92932
+            },
+            {
+                "feature": "features",
+                "score": 0.87071
+            },
+            {
+                "feature": "provide",
+                "score": 0.86338
+            },
+            {
+                "feature": "schedule",
+                "score": 0.84071
+            },
+            {
+                "feature": "software",
+                "score": 0.8398
+            },
+            {
+                "feature": "partner",
+                "score": 0.82981
+            },
+            {
+                "feature": "uptime",
+                "score": 0.82752
+            },
+            {
+                "feature": "report",
+                "score": 0.8235
+            },
+            {
+                "feature": "discounts",
+                "score": 0.80091
+            },
+            {
+                "feature": "sla",
+                "score": 0.77639
+            },
+            {
+                "feature": "community",
+                "score": 0.76441
+            },
+            {
+                "feature": "enterprise",
+                "score": 0.75919
+            },
+            {
+                "feature": "documentation",
+                "score": 0.74846
+            },
+            {
+                "feature": "architecture",
+                "score": 0.74345
+            }
+        ],
+        "HR": [
+            {
+                "feature": "leave",
+                "score": 2.24035
+            },
+            {
+                "feature": "hr",
+                "score": 1.86608
+            },
+            {
+                "feature": "attendance",
+                "score": 1.66829
+            },
+            {
+                "feature": "letter",
+                "score": 1.65233
+            },
+            {
+                "feature": "salary",
+                "score": 1.64971
+            },
+            {
+                "feature": "discrepancy",
+                "score": 1.39928
+            },
+            {
+                "feature": "employee",
+                "score": 1.33736
+            },
+            {
+                "feature": "need",
+                "score": 1.2854
+            },
+            {
+                "feature": "insurance",
+                "score": 1.17709
+            },
+            {
+                "feature": "requesting",
+                "score": 1.16117
+            },
+            {
+                "feature": "register",
+                "score": 1.14915
+            },
+            {
+                "feature": "details",
+                "score": 1.09827
+            },
+            {
+                "feature": "slip",
+                "score": 0.97972
+            },
+            {
+                "feature": "performance",
+                "score": 0.96518
+            },
+            {
+                "feature": "copy",
+                "score": 0.96278
+            },
+            {
+                "feature": "resignation",
+                "score": 0.90177
+            },
+            {
+                "feature": "allowance",
+                "score": 0.89408
+            },
+            {
+                "feature": "medical",
+                "score": 0.89134
+            },
+            {
+                "feature": "approval",
+                "score": 0.88047
+            },
+            {
+                "feature": "internal",
+                "score": 0.87441
+            },
+            {
+                "feature": "company holiday",
+                "score": 0.85827
+            },
+            {
+                "feature": "health insurance",
+                "score": 0.80028
+            },
+            {
+                "feature": "health",
+                "score": 0.80028
+            },
+            {
+                "feature": "apply",
+                "score": 0.79634
+            },
+            {
+                "feature": "calculation",
+                "score": 0.78361
+            }
+        ],
+        "TECHNICAL": [
+            {
+                "feature": "error",
+                "score": 2.218
+            },
+            {
+                "feature": "app",
+                "score": 1.89164
+            },
+            {
+                "feature": "database",
+                "score": 1.19968
+            },
+            {
+                "feature": "memory",
+                "score": 1.19615
+            },
+            {
+                "feature": "page",
+                "score": 1.08419
+            },
+            {
+                "feature": "connection",
+                "score": 1.07522
+            },
+            {
+                "feature": "unable",
+                "score": 0.97086
+            },
+            {
+                "feature": "reset",
+                "score": 0.9363
+            },
+            {
+                "feature": "authentication",
+                "score": 0.91621
+            },
+            {
+                "feature": "failing",
+                "score": 0.91368
+            },
+            {
+                "feature": "console",
+                "score": 0.89898
+            },
+            {
+                "feature": "api",
+                "score": 0.89535
+            },
+            {
+                "feature": "seconds",
+                "score": 0.85258
+            },
+            {
+                "feature": "file",
+                "score": 0.85185
+            },
+            {
+                "feature": "dashboard",
+                "score": 0.82809
+            },
+            {
+                "feature": "throws",
+                "score": 0.80767
+            },
+            {
+                "feature": "endpoint",
+                "score": 0.77756
+            },
+            {
+                "feature": "login",
+                "score": 0.77719
+            },
+            {
+                "feature": "timeout",
+                "score": 0.7758
+            },
+            {
+                "feature": "password",
+                "score": 0.76765
+            },
+            {
+                "feature": "export",
+                "score": 0.7605
+            },
+            {
+                "feature": "rendering",
+                "score": 0.7494
+            },
+            {
+                "feature": "port",
+                "score": 0.74
+            },
+            {
+                "feature": "fails",
+                "score": 0.72561
+            },
+            {
+                "feature": "cache",
+                "score": 0.7206
+            }
+        ]
+    }
+}
